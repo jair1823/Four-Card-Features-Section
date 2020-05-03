@@ -1,5 +1,8 @@
 # Four-Card-Features-Section
+
 Frontend's challenge.
+
+This project is mobile first.
 
 ![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
 
