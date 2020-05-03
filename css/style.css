@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap");
+
+:root {
+  --primary-color-red: hsl(0, 78%, 62%);
+  --primary-color-cyan: hsl(180, 62%, 55%);
+  --primary-color-orange: hsl(34, 97%, 64%);
+  --primary-color-blue: hsl(212, 86%, 64%);
+  --neutral-color-bark-blue: hsl(234, 12%, 34%);
+  --neutral-color-grayish-blue: hsl(229, 6%, 66%);
+  --neutral-color-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.header {
+  max-width: 800px;
+  padding: 1em;
+  font-size: 0.8em;
+  margin: 4em auto;
+  color: var(--neutral-color-bark-blue);
+}
+
+.header h1 {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.header h1 span {
+  display: block;
+  font-weight: 200;
+}
+.header p {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--neutral-color-grayish-blue);
+}
+
+.card {
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 1.2em 2em 1.2em 2em;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 5px;
+  margin-bottom: 1.5em;
+  color: var(--neutral-color-bark-blue);
+  border-top: 5px solid;
+}
+
+.card h2 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.card p {
+  margin: 0;
+  margin-bottom: 1.3em;
+  font-size: 15px;
+  color: var(--neutral-color-grayish-blue);
+}
+
+.card figure {
+  margin: 0;
+  margin-bottom: 0.5em;
+  position: relative;
+  height: 65px;
+}
+.card img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.supervisor {
+  border-top-color: var(--primary-color-cyan);
+  grid-area: supervisor;
+}
+
+.team {
+  border-top-color: var(--primary-color-red);
+  grid-area: team;
+}
+
+.karma {
+  border-top-color: var(--primary-color-orange);
+  grid-area: karma;
+}
+
+.calculator {
+  border-top-color: var(--primary-color-blue);
+  grid-area: calculator;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--neutral-color-light-gray);
+  font-size: 0.8em;
+  position: sticky;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 15px;
+  }
+  .header {
+    font-size: 0.9em;
+    margin: 2em auto;
+  }
+
+  main {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: grid;
+    row-gap: 30px;
+    grid-template-areas:
+      ". team ."
+      "supervisor team calculator"
+      "supervisor karma calculator"
+      ". karma .";
+
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 400px 400px 400px;
+  }
+  .card {
+    margin: 0 auto;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
