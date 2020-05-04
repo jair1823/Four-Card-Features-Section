@@ -3,6 +3,11 @@
 Frontend's challenge.
 This project is mobile first.
 
+### Technologies
+
+* Html5
+* CSS3
+
 ## Desktop design
 
 ![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
